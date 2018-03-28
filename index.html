@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>-->
+    <script type="text/javascript" src="JsBarcode.all.min.js"></script>
+    
+</head>
+    
+    <body>
+        <div class="main">
+            <!--<p>Input Singles</p>-->
+            <!--<input type="text" id="InputJustOne">-->
+            <!-- asdasdasdasdas   <br>-->
+            <!--   Haljhahfuaiwuehflkqjawhed  <br>-->
+            <!--<button onclick="sayHello()">Print</button>-->
+            <!--<button onclick="JsBarcode('#BC_One', document.getElementById('InputJustOne').value)">Barcode One</button>-->
+            <!--<button onclick="JsBarjhgfdcode('#BC_One', document.getElementById('InputJustOne').value)">Barcode Shit</button>-->
+            <!--    <br>-->
+            <!--    <br>-->
+            <!--<div id="result"></div>-->
+            <!--<img id="BC_One"/>-->
+
+            <div id="EAN">
+                <h3>Input EANs</h3>
+                <p></p>Enter ONE string of numbers and letters <br> for one barcode per LINE in the field belowe.<br>Whitespaces will be removed before creation.<br> Pleae avoid Ä,Ö,Ü.</p>
+                <textarea id="InputMany" name="InputMany" onkeyup="BarcodeMe()" onChange="BarcodeMe()"></textarea>
+                <p>
+                    <button onclick="ConvToArray()">Clean Up</button>
+                    <button id="btBarcodeMe" onclick="BarcodeMe()">Create Barcodes!</button>
+                </p>
+
+                <h3>Output Barcodes</h3>
+
+                <!--<p> Margin betweeen barcodes:-->
+                <!--    <input type="text" id="PXbarcode" width=10px/>px-->
+                <!--"ResizeBarcodeMargin(document.getElementsByid('PXbarcode').value)"-->
+                <!--    <button onclick="ResizeBarcodeMargin(document.getElementById('PXbarcode').value)">-->
+                <!--        Resize -->
+                <!--    </button>-->
+                <!--    Standard: 40px-->
+                <!--</p>-->
+
+                <div id="BarcodeHub"></div>
+            </div>
+            <div id="support">
+                <p></p>
+                <h3>Supporting barcodes</h3>
+                <p>
+                    User 1
+                    <input type="text" id="inUser1" value="DE001U01104"> PW
+                    <input type="text" id="inPW1">
+                    <button onclick="updateUserPWcodes(1)">Update</button>
+                    <img class="ClassImgUsPw" id="imgUser1" />
+                    <img class="ClassImgUsPw" id="imgPW1" />
+                </p>
+                <p>
+                    User 2
+                    <input type="text" id="inUser2" value="DE002U00159"> PW
+                    <input default type="text" id="inPW2">
+                    <button onclick="updateUserPWcodes(2)">Update</button>
+                    <img class="ClassImgUsPw" id="imgUser2" />
+                    <img class="ClassImgUsPw" id="imgPW2" />
+                </p>
+                <p>
+                    User 3
+                    <input type="text" id="inUser3" value=""> PW
+                    <input type="text" id="inPW3">
+                    <button onclick="updateUserPWcodes(3)">Update</button>
+                    <img class="ClassImgUsPw" id="imgUser3" />
+                    <img class="ClassImgUsPw" id="imgPW3" />
+                </p>
+
+                <p>
+                    Other
+                    <input type="text" id="inOther1" value="90000183">
+                    <img class="ClassImgUsPw" id="imgOther1" />
+
+                    <input type="text" id="inOther2" value="E110">
+                    <img class="ClassImgUsPw" id="imgOther2" />
+
+                    <input type="text" id="inOther3">
+                    <img class="ClassImgUsPw" id="imgOther3" />
+
+                    <button onclick="updateOtherCodes()">Update</button>
+
+                </p>
+
+            </div>
+        </div> 
+    </body>
+
+</html>
